@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-
+// these are all modules of user , their post and their comments and like
 const userSchema = mongoose.Schema(
     {
         email:{
