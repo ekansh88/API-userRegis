@@ -1,3 +1,6 @@
+const jwt = require('./jwt.JS');
+// connect the jwt file that i made
+
 
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://127.0.0.1:27017/userReg')
@@ -11,6 +14,12 @@ app.use(express.urlencoded({extended:false})); // to use form
 const User = require("./models/userReg")
 const Post = require("./models/userReg")
 const PostLikeComment = require("./models/userReg")
+
+
+
+// use JWT auth to secure the api
+app.use(jwt());
+// and using all over the apis that i have created by this
 
 
 app.listen(3000, ()=>{
